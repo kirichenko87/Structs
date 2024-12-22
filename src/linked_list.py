@@ -15,8 +15,7 @@ class LinkedList:
         node = Node(data=elem, next=None)
 
         if self.size == 0:
-            self.head = node
-            self.size += 1
+            self.add_head(node)
         else:
             iterator = self.head
             while iterator.next != None:
@@ -26,16 +25,12 @@ class LinkedList:
             self.size += 1
 
     def add_head(self, elem: any) -> None:
-        node = Node(data=elem, next=None)
+        node = Node(data=elem, next=self.head)
 
-        if self.size == 0:
-            self.head = node
-            self.size += 1
-        else:
-            head_link = self.head
-            self.head = node
-            self.head.next = head_link
-            self.size += 1
+        self.head = node
+        self.size += 1
+
+
 
 
 
