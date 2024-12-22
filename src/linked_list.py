@@ -30,6 +30,9 @@ class LinkedList:
         self.head = node
         self.size += 1
 
+    def is_empty(self) -> bool:
+        return False if self.size == 0 else True
+
 
 
 
@@ -40,6 +43,8 @@ ll.add(11)
 ll.add(12)
 ll.add(13)
 print(ll.size)
+
+
 
 ll.add_head(11)
 ll.add_head(123)
