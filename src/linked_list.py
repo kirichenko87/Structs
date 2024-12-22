@@ -11,6 +11,7 @@ class LinkedList:
         self.size = 0
         self.head = None
 
+
     def add(self, elem):
         node = Node(data=elem, next=None)
 
@@ -24,16 +25,21 @@ class LinkedList:
             iterator.next = node
             self.size += 1
 
+
     def add_head(self, elem: any) -> None:
         node = Node(data=elem, next=self.head)
 
         self.head = node
         self.size += 1
 
+
     def is_empty(self) -> bool:
         return False if self.size == 0 else True
 
 
+    def clear(self) -> None:
+        self.head = None
+        self.size = 0
 
 
 
